@@ -72,7 +72,7 @@
                     self.score += matchScore * MATCH_BONUS;
                     self.descriptionOfLastFlip = [self.descriptionOfLastFlip stringByAppendingFormat:@"for a score of %d points and a flip cost of %d point",matchScore * MATCH_BONUS, FLIP_COST];
                 } else {
-                    //MISMATCH!
+                    //MISMATCH!!!!
                     //Reset the play and give penalty
                     self.descriptionOfLastFlip = [NSString stringWithFormat:@"You've just mismatched %@ with", card.contents];
                     for (Card *otherCard in flippedCards){
