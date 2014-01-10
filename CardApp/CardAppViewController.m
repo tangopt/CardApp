@@ -10,6 +10,7 @@
 #import "PlayingCardDeck.h"
 #import "PlayingCard.h"
 #import "CardMatchingGame.h"
+#import "GameResult.h"
 
 @interface CardAppViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -21,11 +22,19 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modeSelector;
 @property (weak, nonatomic) IBOutlet UISlider *historySlider;
 @property (strong, nonatomic) NSMutableArray *history;
+@property (strong, nonatomic) GameResult *gameResult;
 
 
 @end
 
 @implementation CardAppViewController
+
+
+-(GameResult *)gameResult{
+    if (!_gameResult) _gameResult = [[GameResult alloc] initForGameType:@"Regular Match"];
+    return _gameResult;
+}
+
 
 - (IBAction)changeMode:(UISegmentedControl *)sender {
     self.game.numOfMatchingCards = sender.selectedSegmentIndex + 2;    
@@ -40,13 +49,13 @@
 
 - (IBAction)dealNewGame:(id)sender {
     self.game = nil;
+    self.gameResult = nil;
     self.history = nil;
     self.historySlider.maximumValue = 0;
     self.historySlider.value = 0;
     self.flipCount = 0;
     self.modeSelector.enabled = YES;
     [self updateUI];
-
 }
 
 - (NSMutableArray *) history{
@@ -59,6 +68,13 @@
                                                           usingDeck:[[PlayingCardDeck alloc]init]];
     return _game;
 }
+
+
+- (void)setFlipCount:(int)flipCount{
+    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d",self.flipCount];
+}
+
 
 - (void) setCardButtons:(NSArray *)cardButtons{
     _cardButtons = cardButtons;
@@ -85,15 +101,12 @@
     self.moveDescriptionLabel.text = self.game.descriptionOfLastFlip;
 }
 
-- (void)setFlipCount:(int)flipCount{
-    _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d",self.flipCount];
-}
 
 - (IBAction)flipCard:(UIButton *)sender {
     self.modeSelector.enabled = NO;
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     [self updateUI];
+    self.gameResult.score = self.game.score;
     [self.history addObject: [self.game.descriptionOfLastFlip copy]];
     self.historySlider.maximumValue++;
     self.historySlider.value = self.historySlider.maximumValue;

@@ -11,6 +11,7 @@
 @implementation Card
 
 - (int) match:(Card *)card{
+//All subclasses of Card can implement a different algorithm for scoring the match, by default, if the contents are the same the score is 1.
     int score = 0;
     if ([card.contents isEqualToString:self.contents]) score = 1;
 
@@ -38,6 +39,11 @@
         score += match;
     }
     return score;
+}
+
+//Description for Cards are their contents
+- (NSString *) description{
+    return [self contents];
 }
 
 @end

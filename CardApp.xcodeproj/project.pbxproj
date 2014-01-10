@@ -26,6 +26,11 @@
 		6EC3FA1217D0BBC5003DE514 /* CardBackBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3FA0F17D0BBC5003DE514 /* CardBackBlue.png */; };
 		6EC3FA1317D0BBC5003DE514 /* CardBackGreen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3FA1017D0BBC5003DE514 /* CardBackGreen.jpeg */; };
 		6EC3FA1417D0BBC5003DE514 /* CardBackRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC3FA1117D0BBC5003DE514 /* CardBackRed.png */; };
+		6EEB820717DF7B50002F1C76 /* GameResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB820617DF7B50002F1C76 /* GameResultsViewController.m */; };
+		6EEB820A17DF7E80002F1C76 /* GameResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB820917DF7E80002F1C76 /* GameResult.m */; };
+		6EEB820D17E0C7DA002F1C76 /* SetCardAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB820C17E0C7DA002F1C76 /* SetCardAppViewController.m */; };
+		6EEF52AD17DE085700492774 /* SetPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF52AC17DE085700492774 /* SetPlayingCard.m */; };
+		6EEF52B017DF2C8A00492774 /* SetPlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF52AF17DF2C8A00492774 /* SetPlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,16 @@
 		6EC3FA0F17D0BBC5003DE514 /* CardBackBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBackBlue.png; sourceTree = "<group>"; };
 		6EC3FA1017D0BBC5003DE514 /* CardBackGreen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CardBackGreen.jpeg; sourceTree = "<group>"; };
 		6EC3FA1117D0BBC5003DE514 /* CardBackRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardBackRed.png; sourceTree = "<group>"; };
+		6EEB820517DF7B50002F1C76 /* GameResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultsViewController.h; sourceTree = "<group>"; };
+		6EEB820617DF7B50002F1C76 /* GameResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultsViewController.m; sourceTree = "<group>"; };
+		6EEB820817DF7E80002F1C76 /* GameResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResult.h; sourceTree = "<group>"; };
+		6EEB820917DF7E80002F1C76 /* GameResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResult.m; sourceTree = "<group>"; };
+		6EEB820B17E0C7DA002F1C76 /* SetCardAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardAppViewController.h; sourceTree = "<group>"; };
+		6EEB820C17E0C7DA002F1C76 /* SetCardAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardAppViewController.m; sourceTree = "<group>"; };
+		6EEF52AB17DE085700492774 /* SetPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPlayingCard.h; path = Model/SetPlayingCard.h; sourceTree = "<group>"; };
+		6EEF52AC17DE085700492774 /* SetPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPlayingCard.m; path = Model/SetPlayingCard.m; sourceTree = "<group>"; };
+		6EEF52AE17DF2C8A00492774 /* SetPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPlayingCardDeck.h; path = Model/SetPlayingCardDeck.h; sourceTree = "<group>"; };
+		6EEF52AF17DF2C8A00492774 /* SetPlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPlayingCardDeck.m; path = Model/SetPlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +123,15 @@
 				6EC3FA1017D0BBC5003DE514 /* CardBackGreen.jpeg */,
 				6EC3FA1117D0BBC5003DE514 /* CardBackRed.png */,
 				6EA3B28217CE38E600E1A5C1 /* MainStoryboard.storyboard */,
-				6EA3B29317CE439100E1A5C1 /* Model */,
+				6EEB820817DF7E80002F1C76 /* GameResult.h */,
+				6EEB820917DF7E80002F1C76 /* GameResult.m */,
 				6EA3B28517CE38E600E1A5C1 /* CardAppViewController.h */,
 				6EA3B28617CE38E600E1A5C1 /* CardAppViewController.m */,
+				6EEB820B17E0C7DA002F1C76 /* SetCardAppViewController.h */,
+				6EEB820C17E0C7DA002F1C76 /* SetCardAppViewController.m */,
+				6EEB820517DF7B50002F1C76 /* GameResultsViewController.h */,
+				6EEB820617DF7B50002F1C76 /* GameResultsViewController.m */,
+				6EA3B29317CE439100E1A5C1 /* Model */,
 				6EA3B27117CE38E600E1A5C1 /* Supporting Files */,
 			);
 			path = CardApp;
@@ -139,11 +160,15 @@
 				6EA3B29017CE438B00E1A5C1 /* Deck.h */,
 				6EA3B29417CE57F300E1A5C1 /* PlayingCard.h */,
 				6EA3B29717CE5FC200E1A5C1 /* PlayingCardDeck.h */,
+				6EEF52AB17DE085700492774 /* SetPlayingCard.h */,
+				6EEF52AE17DF2C8A00492774 /* SetPlayingCardDeck.h */,
 				6E13CB2117CF8E2500534E0C /* CardMatchingGame.h */,
 				6EA3B28E17CE437800E1A5C1 /* Card.m */,
 				6EA3B29117CE438B00E1A5C1 /* Deck.m */,
 				6EA3B29517CE57F300E1A5C1 /* PlayingCard.m */,
 				6EA3B29817CE5FC200E1A5C1 /* PlayingCardDeck.m */,
+				6EEF52AC17DE085700492774 /* SetPlayingCard.m */,
+				6EEF52AF17DF2C8A00492774 /* SetPlayingCardDeck.m */,
 				6E13CB2217CF8E2500534E0C /* CardMatchingGame.m */,
 			);
 			name = Model;
@@ -227,6 +252,11 @@
 				6EA3B29617CE57F300E1A5C1 /* PlayingCard.m in Sources */,
 				6EA3B29917CE5FC200E1A5C1 /* PlayingCardDeck.m in Sources */,
 				6E13CB2317CF8E2500534E0C /* CardMatchingGame.m in Sources */,
+				6EEF52AD17DE085700492774 /* SetPlayingCard.m in Sources */,
+				6EEF52B017DF2C8A00492774 /* SetPlayingCardDeck.m in Sources */,
+				6EEB820717DF7B50002F1C76 /* GameResultsViewController.m in Sources */,
+				6EEB820A17DF7E80002F1C76 /* GameResult.m in Sources */,
+				6EEB820D17E0C7DA002F1C76 /* SetCardAppViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

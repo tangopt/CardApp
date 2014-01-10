@@ -32,6 +32,7 @@
     return _numOfMatchingCards;
 }
 
+//Has to be 2 min or 3 max
 -(void) setNumOfMatchingCards:(int)numOfMatchingCards{
     if (numOfMatchingCards < 2) _numOfMatchingCards = 2;
     else if (numOfMatchingCards > 3) _numOfMatchingCards = 3;
